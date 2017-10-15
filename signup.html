@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Official MetalUP page, here you can Signup, Play and consult Rank!">
+        <meta name="author" content="Gabriele Serra">
+        
+        <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico"/>
+
+        
+		<link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/signup.css">
+
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/ajax.js"></script>
+        <script type="text/javascript" src="./js/signup.js"></script>
+        <script type="text/javascript" src="./js/login.js"></script>
+        <script type="text/javascript" src="./js/twitter.js"></script>
+        <script type="text/javascript" src="./js/facebook.js"></script>
+        
+        <title> Metal UP : Sign up for FREE </title>
+	</head>
+	<body>
+		<div class="wrapper signup">
+            <header>
+                <div class="soldiername">
+                    <p>Hi Soldier!</p>
+                    <a href='signup.html'> Sign up NOW</a> 
+                </div>
+                <div class="logo">
+                    <a href="index.html" class="mainLogo"></a>
+                </div>
+            </header>
+            <nav class="menu">
+                <ul>
+                    <li class="cloud">
+                        <a class="item home" href="index.html">Home</a>
+                    </li>
+                    <li class="cloud">
+                        <a class="item play" href="javascript:play(true)">Play</a>
+                    </li>
+                    <li class="cloud">
+                        <a class="item score" href="score.html">Score</a>
+                    </li>
+                    <li class='cloud'>
+                        <a class='item sign' href='javascript:signShow(true)'>Sign in</a>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <!-- BEGIN WRAPPERS SECTION -->
+                <div class="share">
+                    <div class="textShare"></div>
+                    <div onclick="showShare(true)" class="buttonShare"></div>
+                    <div class="containerShare">
+                        <ul onmouseout="event.stopPropagation()" class="socialshare">
+                            <li class="liShare">
+                                <div id="fb-root"></div>                
+                                <div class="fb-share-button" data-href="https://gabriserra.github.io/MetalUP/" data-layout="button_count"></div>
+                            </li>
+                            <li class="liShare">
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="MetalUp">Tweet</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="gameWrapper" class="overlayer">
+                    <div class="closeButton" onclick="play(false)"></div>
+                    <div class="gameContainer">
+                        <iframe class="game" src="#">If you can see this message, sorry your browser doesn't support iframe. Please upgrade it.
+                        </iframe>
+                    </div>
+                </div>
+                <div id="signWrapper" onclick="signShow(false)" class="overlayer">
+                    <div class="closeButton" onclick="play(false)"></div>
+                    <div id="sign" class="signContainer" onclick="event.stopPropagation()">
+                        <div class="signTitle">
+                            <p class="loginTitle">Login</p>
+                        </div>
+                        <div class="loginForm">
+                            <p class="errorAlert"></p>
+                            <form method="post" action="javascript:loginValidation()">
+                            <p>
+                                <label for="userid">Email</label>
+                                <input type="email" name="email" class="login-input" id="userid" placeholder="user@example.com">
+                            </p>
+                            <p>
+                                <label for="loginPassword">Password</label>
+                                <input type="password" name="password" class="login-input" id="loginPassword" placeholder="mypasw">
+                            </p>
+                            <div class="submitcontainer">
+                                <button name="submit" class="loginButton" onclick="submit">
+                                    Sign Up
+                                </button>
+                                <a class="forgetButton" href="javascript:displayForgetForm(true)">
+                                    Forget?
+                                </a>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="forget" class="signContainer" onclick="event.stopPropagation()">
+                        <div class="signTitle">
+                            <p class="loginTitle">Forget</p>
+                        </div>
+                        <div class="loginForm">
+                            <p class="errorAlert"></p>
+                            <form id="recoverPass" method="post" action="javascript:forgetLogin()">
+                            <p>
+                                <label for="forgetid">Email</label>
+                                <input type="email" name="email" class="login-input" id="forgetid" placeholder="user@example.com">
+                            </p>
+                            <div class="submitcontainer">
+                                <button id="newpass" name="submit" class="loginButton" onclick="submit">
+                                    Get password
+                                </button>
+                                <a class="forgetButton" href="javascript:displayForgetForm(false)">
+                                    Remember!?
+                                </a>
+                            </div>
+                            </form>
+                            <form id="setPass" method="post" action="javascript:setNewPassword()">
+                            <p>
+                                <label for="loginPassword">New Password</label>
+                                <input type="password" name="password" class="login-input" id="newPassword" placeholder="mynewpasw">
+                            </p>
+                            <div class="submitcontainer">
+                                <button id="setnewpass" name="submit" class="loginButton" onclick="submit">
+                                    Set new passw
+                                </button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- END WRAPPERS SECTION -->
+                <div class="form">
+                    <form id="formData" method="post" action="javascript:formValidation()">
+                        <p class="errorAlert"></p>
+                        <p>
+                            <label for="name">Name
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" class="sign-input" name="name" id="name" maxlength="10" placeholder="Soldiername">
+                        </p>
+                        <p>
+                            <label for="email">Email 
+                                <span class="required">*</span>
+                            </label>
+                            <input type="email" class="sign-input" name="email" id="email" placeholder="user@example.com">
+                        </p>
+                        <p>
+                            <label for="password">Password
+                                <span class="required">*</span>
+                            </label>
+                            <input type="password" class="sign-input" name="password" id="password" placeholder="mypasw">
+                        </p>
+                        <p>
+                            <label for="passwordConf">Password confirm
+                                <span class="required">*</span>
+                            </label>
+                            <input type="password" class="sign-input" id="passwordConf" placeholder="mypasw">
+                        </p>
+                        <p>
+                            <label for="bio">Bio</label>
+                            <textarea name="bio" id="bio" cols="45" rows="10" placeholder="Eg. Trust no one!" maxlength="5000"></textarea>
+                        </p>
+                        <div class="submitcontainer">
+                            <button id="submit" class="regButton" onclick="submit">
+                                Sign Up
+                            </button>
+                        </div>											
+                    </form>
+                </div>
+                <div class="afterSignBox">
+                    <div class="afterSignText">
+                        <p class="responseText"></p>
+                    </div>
+                    <div class="marcoUp">
+                        <img src="img/after_sign.gif" alt="Sign up successfull">
+                    </div>
+                    <div class="home">
+                        <a class="home" href="index.html">Return to Home page</a>
+                    </div>
+                </div>
+            </main>
+		</div>
+        <footer>
+            <!-- BEGIN FOOTER SECTION -->
+            <div class="footerBorder"></div>
+            <div class="contentSection">
+                <div class="credits">
+                    <p class="creditsCopyright">© 2014</p>
+                    <address>
+                        <a href="https://github.com/gabriserra" class="creditsName">Gabriele Serra</a>
+                    </address>
+                </div>
+                <div class="social">
+                    <a class="socialLink Fb" href="http://www.facebook.com/#" target="_blank">
+                        <span class="socialIcon Fb"></span>
+                    </a>
+                    <a class="socialLink Tw" href="http://www.twitter.com/#" target="_blank">
+                        <span class="socialIcon Tw"></span>
+                    </a>
+                    <a class="socialLink Yt" href="http://www.youtube.com/#" target="_blank">
+                        <span class="socialIcon Yt"></span>
+                    </a>
+                </div>
+                <div class="newsletterdiv">
+                    <a class="newsletter sign" href="signup.html">Sign Up</a>
+                    <p class="newsletter p">for news and rank</p>
+                </div>
+            </div>
+            <!-- END FOOTER SECTION -->
+        </footer>
+	</body>
+</html>
