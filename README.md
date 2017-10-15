@@ -1,6 +1,9 @@
 # MetalUP - READY FOR NEW ARCADE ADVENTURE?
 A simple canvas-based game freely inspired to Metal Slug
 
+## PLAY
+Play here: https://gabriserra.github.io/MetalUP/
+
 ![Screenshot](screenshot/screen.png)
 
 ## IMPORTANT
