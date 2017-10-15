@@ -1,0 +1,31 @@
+/* about.css : contains graphic presentation for about page */
+.wrapper.about {
+    background-image: url(../img/bg_about.jpg);
+    background-repeat: no-repeat;
+    height: 825px;
+}
+
+.aboutFeatures {
+    font-size: 13px;
+    color: white;
+    text-shadow: 0 0 2px #000000;
+    margin-top: 80px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.aboutFeatures li {
+    list-style: circle;
+}
+
+.aboutText {
+    font-size: 13px;
+    color: white;
+    text-shadow: 0 0 2px #000000;
+    margin: 30px 90px auto 90px;
+    text-align: left;
+}
+
+.howtoText {
+    padding-left: 40px;
+}

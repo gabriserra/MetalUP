@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Official MetalUP page, here you can Signup, Play and consult Rank!">
+        <meta name="author" content="Gabriele Serra">
+        
+        <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico"/>
+
+        
+		<link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/about.css">
+
+        <script type="text/javascript" src="./js/main.js"></script>
+        <!-- Javacript inclusio for share button (give some validation error!)
+        <script type="text/javascript" src="./js/twitter.js"></script>
+        <script type="text/javascript" src="./js/facebook.js"></script>
+        -->
+        
+        <title> Metal UP : Discover new Adventure! </title>
+	</head>
+	<body>
+		<div class="wrapper about">
+            <header>
+                <div class="soldiername">
+                    <p>Hi Soldier!</p>
+                    <a href='signup.php'> Sign up NOW</a> 
+                </div>
+                <div class="logo">
+                    <a href="index.php" class="mainLogo"></a>
+                </div>
+            </header>
+            <nav class="menu">
+                <ul>
+                    <li class="cloud">
+                        <a class="item home" href="index.php">Home</a>
+                    </li>
+                    <li class="cloud">
+                        <a class="item score" href="score.php">Score</a>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <!-- BEGIN WRAPPERS SECTION -->
+                <div class="share">
+                    <div class="textShare"></div>
+                    <div onclick="showShare(true)" class="buttonShare"></div>
+                    <div class="containerShare">
+                        <ul onmouseout="event.stopPropagation()" class="socialshare">
+                            <li class="liShare">
+                                <div id="fb-root"></div>                
+                                <div class="fb-share-button" data-href="http://gabri1994.koding.io/" data-layout="button_count"></div>
+                            </li>
+                            <li class="liShare">
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="MetalUp">Tweet</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END WRAPPERS SECTION -->
+                <div class="aboutWrapper">
+                    <div class="aboutText">
+                        Metal UP it's a new arcade game based on 90's SNK Metal Slug. Purpose of game it's to score more points as you can do!
+                        Marco is the main character but in this mission he doesn't have his gun! YOU have to help him, drawing a platform
+                        where he can jump. Obviously there are rebel soldier! Keep attention!
+                            <p>How To Play:</p>
+                            <p class="howtoText">Click on Play Button visible on each page and wait entire game loading 
+                                (it would require a minute for low bandwidth connection). When game it's ready click on screen to begin!
+                                Click and keep pressed left mouse button for draw a platform.
+                                To finish drawing leave mouse button!
+                                If player die, you can submit score (ONLY IF YOU ARE LOGGED!) and click on restart button to play again.
+                            </p>
+                    </div>
+                    <div class="aboutFeatures">
+                        Features:
+                        <ul>
+                            <li>Less is the lenght of platform, more is wide Marco's jump!</li>
+                            <li>Rebel soldier kill you only on a collision</li>
+                            <li>Game border permit you to bounce back</li>
+                            <li>Platform became concrete only when mouse button is released</li>
+                            <li>Game is sensible to touch screen display</li>
+                            <li>You can submit score and check the rank after a registration</li>
+                        </ul>
+                        Rise in Rank and share on twitter/facebook!
+                    </div>
+                </div>
+            </main>
+		</div>
+        <footer>
+            <!-- BEGIN FOOTER SECTION -->
+            <div class="footerBorder"></div>
+            <div class="contentSection">
+                <div class="credits">
+                    <p class="creditsCopyright">© 2014</p>
+                    <address>
+                        <a href="http://facebook.com/gabri.serra" class="creditsName">Gabriele Serra</a>
+                    </address>
+                </div>
+                <div class="social">
+                    <a class="socialLink Fb" href="http://www.facebook.com/#" target="_blank">
+                        <span class="socialIcon Fb"></span>
+                    </a>
+                    <a class="socialLink Tw" href="http://www.twitter.com/#" target="_blank">
+                        <span class="socialIcon Tw"></span>
+                    </a>
+                    <a class="socialLink Yt" href="http://www.youtube.com/#" target="_blank">
+                        <span class="socialIcon Yt"></span>
+                    </a>
+                </div>
+                <div class="newsletterdiv">
+                    <a class="newsletter sign" href="signup.php">Sign Up</a>
+                    <p class="newsletter p">for news and rank</p>
+                </div>
+            </div>
+            <!-- END FOOTER SECTION --> 
+        </footer>
+	</body>
+</html>

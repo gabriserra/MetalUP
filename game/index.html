@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html manifest="game.appcache">
+    <head>
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name = "viewport" content = "width = device-width, user-scalable = no">
+
+        
+		<link rel="stylesheet" href="./css/style.css">
+        <script type="text/javascript" src="./js/player.js"></script>
+        <script type="text/javascript" src="./js/soldier.js"></script>
+        <script type="text/javascript" src="./js/pad.js"></script>
+        <script type="text/javascript" src="./js/menu.js"></script>
+        <script type="text/javascript" src="./js/utility.js"></script>
+        <script type="text/javascript" src="./js/game.js"></script>
+        <script type="text/javascript" src="./js/sketcher.js"></script>
+        <script type="text/javascript" src="./js/audio.js"></script>
+        <script type="text/javascript" src="./js/clock.js"></script>
+        
+        <!-- same ajax class than site -->
+        <script type="text/javascript" src="../js/ajax.js"></script>
+
+        <title> Metal UP </title>
+	</head>
+	<body onload="javascript:init()">
+		<div id="container">
+            
+            <canvas id="canvas">
+                    If you see this message we're sorry!
+                    Your browser don't support HTML5 canvas.
+            </canvas>
+            
+            <div id="soundCtrl">
+                <a class="mute music" id="music" href="javascript:changeMusicState()">mute music</a>
+                <a class="mute sound" id="effect" href="javascript:changeEffectState()">mute sound</a>
+            </div>
+            
+            <div id="mainMenu">
+                <img id="logo" src="img/logo.png" alt="Main logo" width="400" height="225"/>
+                <p class="info">
+                DRAW A LINE TO COMPLETE MARCO'S MISSION!
+                </p>
+            </div>
+            
+            <div id="gameOverMenu">
+                <h1>Mission Failed</h1>
+                <h3 id="finalScore">You scored 0 points. </h3>
+                <button onclick="" id="restart">Restart</button>
+                <button onclick="submit()" id="submitscore">Submit!</button>
+            </div>
+            
+            <!-- Load sprite image and audio file -->
+            <img id="load" class="loading" width="422" height="552" src="./img/load.gif" alt="Loading.."/>
+            <img id="sprite" class="sprite" src="./img/sprite.png" alt=""/>
+            <img id="plsprite" class="sprite" src="./img/plsprite.png" alt=""/>
+            <img id="soldierprite" class="sprite" src="./img/soldiersprite.png" alt=""/>
+            
+            <audio id="musicFile" loop>
+                <source src="./sound/music.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio id="beginFile">
+                <source src="./sound/missionstart.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="jumpFile">
+                <source src="./sound/ok.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="endFile">
+                <source src="./sound/die.mp3" type="audio/mpeg">
+            </audio>
+            
+            <div id="scoreBoard">
+                <!-- 0-based score, dinamically refresh with JS -->
+                <p id="score">0</p>
+            </div>
+		</div>  
+	</body>
+</html>

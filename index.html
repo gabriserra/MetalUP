@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Official MetalUP page, here you can Signup, Play and consult Rank!">
+        <meta name="author" content="Gabriele Serra">
+        
+        <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+
+		<link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/slider.css">
+
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/ajax.js"></script>
+        <script type="text/javascript" src="./js/slider.js"></script>
+        <script type="text/javascript" src="./js/login.js"></script>
+        <script type="text/javascript" src="./js/twitter.js"></script>
+        <script type="text/javascript" src="./js/facebook.js"></script>
+
+        <title> Metal UP : Ready for new arcade adventure? </title>
+	</head>
+	<body>
+		<div class="wrapper home">
+            <header>
+                <div class="soldiername">
+                    <p>Hi Soldier!</p>
+                    <a href='signup.html'> Sign up NOW</a>
+                </div>
+                <div class="logo">
+                    <a href="index.html" class="mainLogo"></a>
+                </div>
+            </header>
+            <nav class="menu">
+                <ul>
+                    <li class="cloud">
+                        <a class="item play" href="javascript:play(true)">Play</a>
+                    </li>
+                    <li class="cloud">
+                        <a class="item score" href="score.html">Score</a>
+                    </li>
+                    <li class='cloud'>
+                        <a class='item sign' href='javascript:signShow(true)'>Sign in</a>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <link rel="import" href="./html/wrappers.html">
+                <div class="slider">
+                    <div onclick="arrow('prev')" class="arrow Pre"></div>
+                    <div onclick="arrow('next')" class="arrow Next"></div>
+                    <div id="img0" class="sliderimg active"></div>
+                    <div id="img1" class="sliderimg nactive"></div>
+                    <div id="img2" class="sliderimg nactive"></div>
+                </div>
+                <div onclick="javascript:location.href='/about.html'" class="contentslider">
+                    <div class="marcoslider"></div>
+                    <div class="textslider"></div>
+                </div>
+            </main>
+		</div>
+        <footer>
+            <link rel="import" href="./html/footer.html">                
+        </footer>
+	</body>
+</html>

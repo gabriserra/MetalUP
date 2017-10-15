@@ -1,0 +1,86 @@
+/*signup.css : specify style for signup page element */
+.wrapper.signup {
+    background-image: url(../img/bg_signup.jpg);
+    background-repeat: no-repeat;
+    height: 1100px;
+}
+
+.form {
+    text-align: left;
+}
+
+.form form, .afterSignBox {
+    width: 580px;
+    margin: 50px auto 50px;
+    transition: width 0.25s ease-in-out;
+}
+
+.afterSignBox {
+    display: none;
+    height: 0;
+    color: white;
+}
+
+.marcoUp, afterSignText {
+    display: block;
+}
+
+.marcoUp {
+    width: 200px;
+    height: 229px;
+    margin: 0 auto;
+}
+
+.form label {
+    color: white;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form input, .form textarea {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #EFEFEF;
+    color: #666666;
+    margin-bottom: 5px;
+    outline-width: 0;
+    padding-left: 10px;
+}
+
+.form input {
+    font-size: 13px;
+    height: 40px;
+    margin-bottom: 20px;
+    width: 560px;
+}
+
+.form textarea {
+    height: 170px;
+    margin-bottom: -5px;
+    padding-top: 10px;
+    width: 560px;
+    font-size: 13px;
+}
+
+.home {
+    text-decoration: none;
+    color: inherit;
+}
+
+#submit {
+    font-size: 13px;
+    font-family: inherit;
+    float: right;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 50px;
+	background: rgba(255, 255, 255, 0.2);
+    width: 150px;
+    height: 50px;
+}
+
+#submit:hover {
+    background: rgba(255, 255, 255, 0.5);
+}

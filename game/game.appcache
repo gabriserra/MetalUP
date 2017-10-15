@@ -1,0 +1,44 @@
+CACHE MANIFEST
+# 2015-02-15 v0.1.3
+# GAME CACHE TO PLAY A LOCALE VERSION
+
+# CSS
+/game/css/style.css
+
+# FONT
+/game/font/metalslugfont.ttf
+/game/font/metalslugfont.woff
+
+# IMAGE
+/game/img/back.png
+/game/img/effectoff.png
+/game/img/effecton.png
+/game/img/logo.png
+/game/img/load.gif
+/game/img/musicoff.png
+/game/img/musicon.png
+/game/img/plsprite.png
+/game/img/soldiersprite.png
+/game/img/sprite.png
+
+# SCRIPT
+/game/js/audio.js
+/game/js/clock.js
+/game/js/game.js
+/game/js/menu.js
+/game/js/pad.js
+/game/js/player.js
+/game/js/sketcher.js
+/game/js/soldier.js
+/game/js/utility.js
+/js/ajax.js
+
+# SOUND
+/game/sound/die.mp3
+/game/sound/marco.mp3
+/game/sound/missionstart.mp3
+/game/sound/music.mp3
+/game/sound/ok.mp3
+
+NETWORK:
+/game/php/scoresubmit.php

@@ -1,0 +1,88 @@
+<!-- BEGIN WRAPPERS SECTION -->
+<div class="share">
+    <div class="textShare"></div>
+    <div onclick="showShare(true)" class="buttonShare"></div>
+    <div class="containerShare">
+        <ul onmouseout="event.stopPropagation()" class="socialshare">
+            <li class="liShare">
+                <!-- Facebook share button root div (give some error)
+                <div id="fb-root"></div>                
+                <div class="fb-share-button" data-href="http://gabri1994.koding.io/" data-layout="button_count"></div>
+                -->
+            </li>
+            <li class="liShare">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="MetalUp">Tweet</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="gameWrapper" class="overlayer">
+    <div class="closeButton" onclick="play(false)"></div>
+    <div class="gameContainer">
+        <iframe class="game" src="#">If you can see this message, sorry your browser doesn't support iframe. Please upgrade it.
+        </iframe>
+    </div>
+</div>
+<div id="signWrapper" onclick="signShow(false)" class="overlayer">
+    <div class="closeButton" onclick="play(false)"></div>
+    <div id="sign" class="signContainer" onclick="event.stopPropagation()">
+        <div class="signTitle">
+            <p class="loginTitle">Login</p>
+        </div>
+        <div class="loginForm">
+            <p class="errorAlert"></p>
+            <form method="post" action="javascript:loginValidation()">
+            <p>
+                <label for="userid">Email</label>
+                <input type="email" name="email" class="login-input" id="userid" placeholder="user@example.com">
+            </p>
+            <p>
+                <label for="loginPassword">Password</label>
+                <input type="password" name="password" class="login-input" id="loginPassword" placeholder="mypasw">
+            </p>
+            <div class="submitcontainer">
+                <button name="submit" class="loginButton" onclick="submit">
+                    Sign Up
+                </button>
+                <a class="forgetButton" href="javascript:displayForgetForm(true)">
+                    Forget?
+                </a>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div id="forget" class="signContainer" onclick="event.stopPropagation()">
+        <div class="signTitle">
+            <p class="loginTitle">Forget</p>
+        </div>
+        <div class="loginForm">
+            <p class="errorAlert"></p>
+            <form id="recoverPass" method="post" action="javascript:forgetLogin()">
+            <p>
+                <label for="forgetid">Email</label>
+                <input type="email" name="email" class="login-input" id="forgetid" placeholder="user@example.com">
+            </p>
+            <div class="submitcontainer">
+                <button id="newpass" name="submit" class="loginButton" onclick="submit">
+                    Get password
+                </button>
+                <a class="forgetButton" href="javascript:displayForgetForm(false)">
+                    Remember!?
+                </a>
+            </div>
+            </form>
+            <form id="setPass" method="post" action="javascript:setNewPassword()">
+            <p>
+                <label for="loginPassword">New Password</label>
+                <input type="password" name="password" class="login-input" id="newPassword" placeholder="mynewpasw">
+            </p>
+            <div class="submitcontainer">
+                <button id="setnewpass" name="submit" class="loginButton" onclick="submit">
+                    Set new passw
+                </button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- END WRAPPERS SECTION -->
